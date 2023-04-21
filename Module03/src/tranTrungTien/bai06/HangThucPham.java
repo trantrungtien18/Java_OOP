@@ -70,12 +70,8 @@ public class HangThucPham extends Product {
 	@Override
 	public String toString() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		String s = "";
-		s += String.format("|%-10s|%-20s|%-15s|%-10s|%-20s|%-20s|%-15s|", "Ma hang", "Ten hang", "Don gia", "So luong",
-				"Nha cung cap", "Ngay san xuat", "Ngay het han") + "\n" + super.toString()
-				+ String.format("|%-20s|%20s|%15s|", nhaCungCap, dtf.format(ngaySX), dtf.format(ngayHH))
-				+ "\n----------------------------------------------------------------------------------------------------------------------\n";
-		return s;
+		return super.toString() + String.format("|%-20s|%20s|%15s|%15s|%15s|%15s|%15s|", nhaCungCap, dtf.format(ngaySX),
+				dtf.format(ngayHH), "-", "-", "-", "-");
 	}
 
 }

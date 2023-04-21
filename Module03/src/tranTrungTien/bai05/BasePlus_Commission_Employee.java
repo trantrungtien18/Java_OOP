@@ -34,9 +34,7 @@ public class BasePlus_Commission_Employee extends Commission_Employee {
 	@Override
 	public String toString() {
 		DecimalFormat df = new DecimalFormat("#,##0.00 VND");
-		String s = "";
-		s += "\nBaseplus " + super.toString() + String.format("%15s|", df.format(baseSalary));
-		return s + "\n";
+		return super.toString() + String.format("%15s|", df.format(baseSalary));
 	}
 
 }

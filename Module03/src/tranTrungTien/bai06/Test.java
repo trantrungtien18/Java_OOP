@@ -7,12 +7,13 @@ public class Test {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		DanhSachHangHoa list = new DanhSachHangHoa(3);
+		DanhSachHangHoa list = new DanhSachHangHoa();
 		list.addProduct(
 				new HangThucPham("001", "Gao", 10000, 10, "VN", LocalDate.of(2023, 1, 30), LocalDate.of(2023, 5, 20)));
 		list.addProduct(new HangDienMay("002", "Laptop", 500000, 5, 5, 200));
 		list.addProduct(new HangSanhSu("003", "Chau hoa", 1000, 50, "Bat Trang", LocalDate.now()));
-//
+		list.addProduct(
+				new HangThucPham("004", "Khoai", 5000, 20, "VN", LocalDate.of(2023, 1, 30), LocalDate.of(2023, 5, 20)));
 		int key = 0;
 		do {
 			System.out.println("--Menu--");

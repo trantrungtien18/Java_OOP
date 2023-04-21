@@ -44,11 +44,8 @@ public class Customer extends Person {
 
 	@Override
 	public String toString() {
-		String s = "";
-		s += String.format("|%15s|%20s|%20s|%20s|%20s|", "Name", "Address", "Company Name", "Tri gia hoa don", "")
-				+ "\n" + super.toString() + String.format("%20s|%-20s|%-20s|", companyName, triGiaHoaDon, "")
-				+ "\n-----------------------------------------------------------------------------------------------------\n";
-		return s;
+		return super.toString() + String.format("%15s|%15s|%15s|%15s|%20s|%15s|%15s|", "-", "-", "-", "-", "-",
+				companyName, triGiaHoaDon);
 	}
 
 }

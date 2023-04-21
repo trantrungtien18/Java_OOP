@@ -56,12 +56,8 @@ public class HangSanhSu extends Product {
 	@Override
 	public String toString() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		String s = "";
-		s += String.format("|%-10s|%-20s|%-15s|%-10s|%-20s|%-20s|%-15s|", "Ma hang", "Ten hang", "Don gia", "So luong",
-				"Ngay san xuat", "Ngay nhap kho", "") + "\n" + super.toString()
-				+ String.format("|%-20s|%20s|%15s|", nhaSanXuat, dtf.format(ngayNhapKho), "")
-				+ "\n----------------------------------------------------------------------------------------------------------------------\n";
-		return s;
+		return super.toString() + String.format("|%20s|%20s|%15s|%15s|%15s|%15s|%15s|", "-", "-", "-", "-", "-",
+				nhaSanXuat, dtf.format(ngayNhapKho));
 	}
 
 }

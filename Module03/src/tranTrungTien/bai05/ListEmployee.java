@@ -14,9 +14,14 @@ public class ListEmployee {
 		return list.add(e);
 	}
 
+	public String getTitle() {
+		return String.format("|%15s|%15s|%15s|%15s|%15s|%15s|%15s|%15s|\n", "Name", "SSN", "Wage", "Hour",
+				"Gross Sales", "Commission Rate", "Salary", "Base Salary");
+	}
+
 	@Override
 	public String toString() {
-		String s = "";
+		String s = getTitle();
 		for (Employee employee : list) {
 			s += employee + "\n";
 		}

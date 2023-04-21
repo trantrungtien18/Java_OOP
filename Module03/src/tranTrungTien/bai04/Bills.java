@@ -3,6 +3,7 @@ package tranTrungTien.bai04;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Bills {
 	private String maGD;
@@ -22,6 +23,23 @@ public class Bills {
 		this.ngayGD = ngayGD;
 		setDonGia(donGia);
 		setSoLuong(soLuong);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(maGD);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Bills other = (Bills) obj;
+		return Objects.equals(maGD, other.maGD);
 	}
 
 	public String getMaGD() {

@@ -42,11 +42,8 @@ public class Employee extends Person {
 	@Override
 	public String toString() {
 		DecimalFormat df = new DecimalFormat("#,##0.00 VND");
-		String s = "";
-		s += String.format("|%15s|%20s|%20s|%20s|%20s|", "Name", "Address", "Rate Wage", "Salary", "") + "\n"
-				+ super.toString() + String.format("%-20s|%-20s|%20s|", rateWage, df.format(getSalary()), "")
-				+ "\n-----------------------------------------------------------------------------------------------------\n";
-		return s;
+		return super.toString() + String.format("%15s|%15s|%15s|%15s|%20s|%15s|%15s|", "-", "-", "-", rateWage,
+				df.format(getSalary()), "-", "-");
 	}
 
 }

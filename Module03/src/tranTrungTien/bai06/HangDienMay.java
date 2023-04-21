@@ -51,12 +51,8 @@ public class HangDienMay extends Product {
 
 	@Override
 	public String toString() {
-		String s = "";
-		s += String.format("|%-10s|%-20s|%-15s|%-10s|%-20s|%-20s|%-15s|", "Ma hang", "Ten hang", "Don gia", "So luong",
-				"Thoi gian bao hanh", "Cong suat", "") + "\n" + super.toString()
-				+ String.format("|%20s|%20s|%15s|", thoiGianBaoHanh, congSuat, "")
-				+ "\n----------------------------------------------------------------------------------------------------------------------\n";
-		return s;
+		return super.toString() + String.format("|%20s|%20s|%15s|%15s|%15s|%15s|%15s|", "-", "-", "-", thoiGianBaoHanh,
+				congSuat, "-", "-");
 	}
 
 }

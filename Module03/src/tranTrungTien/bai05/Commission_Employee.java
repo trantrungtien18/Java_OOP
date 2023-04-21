@@ -44,21 +44,11 @@ public class Commission_Employee extends Employee {
 		return commissionRate * grossSales;
 	}
 
-	public String getTitle() {
-		return String.format("|%-10s|%-15s|%-15s|%-15s|%-15s|%15s|", "Name", "SSN", "GrossSales", "CommissionRate",
-				"Salary", "BaseSalary");
-	}
-
 	@Override
 	public String toString() {
 		DecimalFormat df = new DecimalFormat("#,##0.00 VND");
-		String s = "";
-		s += super.toString() + String.format("%15s|%15s|%15s|", grossSales, commissionRate, df.format(getMoney()));
-//		s += "Commission employee: " + super.toString() + "\n"
-//				+ String.format("Gross sales: %s;\nCommission rate: %s", df.format(grossSales),
-//						commissionRate)
-//				+ "\n";
-		return "Commission Employee:\n" + getTitle() + "\n" + s;
+		return super.toString() + String.format("%15s|%15s|%15s|%15s|%15s|%15s|", "-", "-", grossSales, commissionRate,
+				df.format(getMoney()), "-");
 	}
 
 }

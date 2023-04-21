@@ -1,6 +1,7 @@
 package tranTrungTien.bai06;
 
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 public abstract class Product {
 	private String maHang;
@@ -20,6 +21,23 @@ public abstract class Product {
 		setTenHang(tenHang);
 		setDonGia(donGia);
 		setSoLuong(soLuong);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(maHang);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		return Objects.equals(maHang, other.maHang);
 	}
 
 	public String getMaHang() {

@@ -56,12 +56,12 @@ public abstract class Employee {
 //		return String.format("|%-10s|%-10s|%-5s|%-15s|%-15s|%-15s", "FirstName", "LastName", "SSN", "Money",
 //				"Hour/C.Rate", "BaseSalary");
 //	}
-	public abstract String getTitle();
+//	public abstract String getTitle();
 
 	@Override
 	public String toString() {
 		String name = firtName + " " + lastName;
-		return String.format("|%10s|%-15s|", name, SSN);
+		return String.format("|%15s|%-15s|", name, SSN);
 
 //		String s = String.format("%s %s", firtName, lastName) + "\n"
 //				+ String.format("Social security number: %-10s", SSN);

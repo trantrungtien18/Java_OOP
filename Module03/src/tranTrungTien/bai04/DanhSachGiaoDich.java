@@ -10,8 +10,12 @@ public class DanhSachGiaoDich {
 		this.list = new ArrayList<>();
 	}
 
-	public boolean addGiaoDich(Bills p) {
-		return list.add(p);
+	public boolean addGiaoDich(Bills bill) {
+		if(list.contains(bill)) {			
+			return true;
+		}
+		list.add(bill);
+		return false;
 	}
 
 	public String getTitle() {

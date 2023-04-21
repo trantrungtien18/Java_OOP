@@ -51,9 +51,9 @@ public class Management {
 			}
 		});
 	}
-	
+
 	public boolean update(String ten, String newAddress) {
-		for (int i=0; i<list.size(); i++) {
+		for (int i = 0; i < list.size(); i++) {
 			if (findPerson(ten) != -1) {
 				list.get(i).setAddress(newAddress);
 				return true;
@@ -62,9 +62,14 @@ public class Management {
 		return false;
 	}
 
+	public String getTitle() {
+		return String.format("|%15s|%20s|%15s|%15s|%15s|%15s|%20s|%15s|%15s|\n", "Name", "Address", "Score 1",
+				"Score 2", "AVG Score", "Rate Wage", "Salary", "Company Name", "Invoice Value");
+	}
+
 	@Override
 	public String toString() {
-		String s = "";
+		String s = getTitle();
 		for (Person person : list) {
 			s += person.toString() + "\n";
 		}

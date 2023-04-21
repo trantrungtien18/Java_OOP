@@ -55,11 +55,8 @@ public class Student extends Person {
 
 	@Override
 	public String toString() {
-		String s = "";
-		s += String.format("|%15s|%20s|%20s|%20s|%20s|", "Name", "Address", "Score 1", "Score 2", "Avg Score") + "\n"
-				+ super.toString() + String.format("%-20s|%-20s|%-20s|", score1, score2, avgScore())
-				+ "\n-----------------------------------------------------------------------------------------------------\n";
-		return s;
+		return super.toString()
+				+ String.format("%15s|%15s|%15s|%15s|%20s|%15s|%15s|", score1, score2, avgScore(), "-", "-", "-", "-");
 	}
 
 }
